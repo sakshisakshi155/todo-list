@@ -21,7 +21,8 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 32px 16px;
+            padding: 0 16px 32px;
+            background: #eef2ff;
         }
 
         .app {
@@ -50,14 +51,35 @@
             align-items: center;
             gap: 12px;
             padding: 18px 28px;
-            background: #eff3ff;
-            border-bottom: 1px solid #e5e7eb;
+            background: #4338ca;
+            border-bottom: 1px solid #3b82f6;
+            color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            backdrop-filter: blur(10px);
         }
 
         .navbar .logo {
             font-size: 1rem;
             font-weight: 700;
-            color: #1f2937;
+            color: #ffffff;
+        }
+
+        .nav-button {
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+        }
+
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.22);
+            color: #ffffff;
+            transform: translateY(-1px);
         }
 
         .nav-links {
