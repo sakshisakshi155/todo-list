@@ -44,6 +44,44 @@
             }
         }
 
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 28px;
+            background: #eff3ff;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .navbar .logo {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            border: 1px solid transparent;
+            background: transparent;
+            color: #4b5563;
+            padding: 8px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+        }
+
+        .nav-button:hover {
+            background: #eef2ff;
+            color: #4338ca;
+            transform: translateY(-1px);
+        }
+
         .header {
             padding: 32px 28px 20px;
             background: linear-gradient(135deg, #4f46e5, #3b82f6);
@@ -241,6 +279,15 @@
 </head>
 <body>
     <div class="app" role="application" aria-label="Todo list application">
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="logo">Todo List</div>
+            <div class="nav-links">
+                <button type="button" class="nav-button">Home</button>
+                <button type="button" class="nav-button">Tasks</button>
+                <button type="button" class="nav-button">About</button>
+            </div>
+        </nav>
+
         <section class="header">
             <h1>Todo List</h1>
             <p>Fast, accessible, and persistent tasks. Add, complete, edit, filter, and store your list locally.</p>
