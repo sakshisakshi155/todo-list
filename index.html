@@ -30,6 +30,18 @@
             border-radius: 24px;
             box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
             overflow: hidden;
+            animation: fadeCard 280ms ease-out both;
+        }
+
+        @keyframes fadeCard {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .header {
@@ -80,11 +92,12 @@
             color: #fff;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.2s ease;
+            transition: background 0.2s ease, transform 0.15s ease;
         }
 
         .new-task button:hover {
             background: #3730a3;
+            transform: translateY(-1px);
         }
 
         .todo-list {
@@ -100,10 +113,20 @@
             gap: 12px;
             padding: 16px 0;
             border-bottom: 1px solid #e5e7eb;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInItem 240ms ease-out forwards;
         }
 
         .todo-item:last-child {
             border-bottom: none;
+        }
+
+        @keyframes fadeInItem {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .todo-item label {
@@ -142,12 +165,13 @@
             padding: 8px;
             border-radius: 10px;
             cursor: pointer;
-            transition: background 0.2s ease, color 0.2s ease;
+            transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
         }
 
         .todo-actions button:hover {
             background: #f3f4f6;
             color: #111827;
+            transform: translateY(-1px);
         }
 
         .status-bar {
@@ -173,7 +197,7 @@
             padding: 10px 14px;
             border-radius: 12px;
             cursor: pointer;
-            transition: background 0.2s ease, border-color 0.2s ease;
+            transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
         }
 
         .filters button.active,
@@ -181,6 +205,7 @@
         .filters button:hover {
             background: #eef2ff;
             border-color: #c7d2fe;
+            transform: translateY(-1px);
         }
 
         .filters button.active {
